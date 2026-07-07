@@ -25,11 +25,30 @@ async function initDashboard() {
 }
 
 function renderDashboard(courses) {
-  const normalizedCourses = courses.map(normalizeCourse);
+  const normalizedCourses = prioritizeRequestedCourse(courses.map(normalizeCourse));
   renderedCourses = normalizedCourses;
 
   courseList.replaceChildren(...normalizedCourses.map(createCourseSection));
   courseList.setAttribute("aria-busy", "false");
+}
+
+function prioritizeRequestedCourse(courses) {
+  const requestedCourse = getRequestedCourse();
+
+  if (!requestedCourse) {
+    return courses;
+  }
+
+  return [...courses].sort((a, b) => {
+    const aMatches = a.slug.toLowerCase() === requestedCourse;
+    const bMatches = b.slug.toLowerCase() === requestedCourse;
+
+    if (aMatches === bMatches) {
+      return 0;
+    }
+
+    return aMatches ? -1 : 1;
+  });
 }
 
 function normalizeCourse(course) {
