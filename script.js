@@ -131,6 +131,8 @@ function createLink(label, href) {
   const link = document.createElement("a");
   link.className = "action-link";
   link.href = href;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
   link.textContent = label;
   return link;
 }

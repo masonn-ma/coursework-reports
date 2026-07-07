@@ -3,7 +3,18 @@
     {
       "name": "Computer and Internet Forensics",
       "slug": "CompForensics",
-      "reports": []
+      "reports": [
+        {
+          "title": "Report 1",
+          "pdfUrl": "reports/CompForensics/Report 1.pdf",
+          "presentationUrl": ""
+        },
+        {
+          "title": "Report 2",
+          "pdfUrl": "reports/CompForensics/Report 2.pdf",
+          "presentationUrl": "https://www.youtube.com/watch?v=yN4in4crwA8"
+        }
+      ]
     },
     {
       "name": "Data Communication and Net-Centric Computing",
@@ -34,6 +45,22 @@
           "title": "Report 3",
           "pdfUrl": "reports/EthicalHacking/MasonMa_Report3.pdf",
           "presentationUrl": "https://www.youtube.com/watch?v=gVjLPiPv9-s"
+        }
+      ]
+    },
+    {
+      "name": "SEPM",
+      "slug": "SEPM",
+      "reports": [
+        {
+          "title": "Final Report",
+          "pdfUrl": "reports/SEPM/Final Report.pdf",
+          "presentationUrl": "https://www.youtube.com/watch?v=aa_4ggNABEM"
+        },
+        {
+          "title": "Project Proposal",
+          "pdfUrl": "reports/SEPM/Project Proposal.pdf",
+          "presentationUrl": ""
         }
       ]
     }
