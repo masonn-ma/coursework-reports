@@ -40,8 +40,8 @@ function prioritizeRequestedCourse(courses) {
   }
 
   return [...courses].sort((a, b) => {
-    const aMatches = a.slug.toLowerCase() === requestedCourse;
-    const bMatches = b.slug.toLowerCase() === requestedCourse;
+    const aMatches = normalizeCourseKey(a.slug) === requestedCourse;
+    const bMatches = normalizeCourseKey(b.slug) === requestedCourse;
 
     if (aMatches === bMatches) {
       return 0;
@@ -176,6 +176,8 @@ function applyFocusedCourse() {
     return;
   }
 
+  courseList.prepend(target);
+
   document.querySelectorAll(".course-section").forEach((section) => {
     setCourseExpanded(section, section === target);
     section.classList.toggle("is-focused", section === target);
@@ -194,13 +196,23 @@ function getRequestedCourse() {
   const queryCourse = params.get("course");
   const hashCourse = window.location.hash ? decodeURIComponent(window.location.hash.slice(1)) : "";
 
-  return (queryCourse || hashCourse || "").trim().toLowerCase();
+  return normalizeCourseKey(queryCourse || hashCourse);
 }
 
 function findCourseSection(course) {
   return [...document.querySelectorAll(".course-section")].find(
-    (section) => section.dataset.courseSlug === course,
+    (section) => normalizeCourseKey(section.dataset.courseSlug) === course,
   );
+}
+
+function normalizeCourseKey(value) {
+  return String(value || "")
+    .trim()
+    .replace(/^#/, "")
+    .replace(/^course=/i, "")
+    .replace(/\/$/, "")
+    .replace(/[\s_-]+/g, "")
+    .toLowerCase();
 }
 
 function setCourseExpanded(section, expanded) {
