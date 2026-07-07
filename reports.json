@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "name": "Data Communications",
+      "slug": "DataComs",
+      "reports": [
+        {
+          "pdfUrl": "reports/DataComs/MasonMa_DataComs.pdf",
+          "presentationUrl": "",
+          "score": ""
+        }
+      ]
+    },
+    {
+      "name": "Computer Forensics",
+      "slug": "CompForensics",
+      "reports": []
+    },
+    {
+      "name": "Ethical Hacking",
+      "slug": "EthicalHacking",
+      "reports": []
+    }
+  ]
+}

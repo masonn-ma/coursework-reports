@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="A centralized dashboard of coursework reports, presentations, and scores grouped by course."
+    >
+    <title>Coursework Reports Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#courses">Skip to reports</a>
+
+    <header class="site-header">
+      <div class="header-content">
+        <p class="eyebrow">Academic Archive</p>
+        <h1>Coursework Reports Dashboard</h1>
+        <p class="intro">
+          Browse reports by course, open supporting presentations, and check recorded assignment scores.
+        </p>
+
+        <dl class="summary-grid" aria-label="Dashboard summary">
+          <div>
+            <dt>Courses</dt>
+            <dd id="course-count">0</dd>
+          </div>
+          <div>
+            <dt>Reports</dt>
+            <dd id="report-count">0</dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="toolbar" aria-label="Course display controls">
+        <button class="toolbar-button" type="button" id="expand-all">Expand all</button>
+        <button class="toolbar-button" type="button" id="collapse-all">Collapse all</button>
+      </div>
+
+      <section class="course-list" id="courses" aria-live="polite" aria-busy="true">
+        <p class="loading-state">Loading reports...</p>
+      </section>
+    </main>
+  </body>
+</html>
