@@ -1,6 +1,4 @@
 const courseList = document.querySelector("#courses");
-const courseCount = document.querySelector("#course-count");
-const reportCount = document.querySelector("#report-count");
 const expandAllButton = document.querySelector("#expand-all");
 const collapseAllButton = document.querySelector("#collapse-all");
 
@@ -29,11 +27,6 @@ async function initDashboard() {
 function renderDashboard(courses) {
   const normalizedCourses = courses.map(normalizeCourse);
   renderedCourses = normalizedCourses;
-
-  courseCount.textContent = String(normalizedCourses.length);
-  reportCount.textContent = String(
-    normalizedCourses.reduce((total, course) => total + course.reports.length, 0),
-  );
 
   courseList.replaceChildren(...normalizedCourses.map(createCourseSection));
   courseList.setAttribute("aria-busy", "false");
@@ -80,7 +73,6 @@ function createCourseSection(course) {
   const icon = document.createElement("span");
   icon.className = "course-icon";
   icon.setAttribute("aria-hidden", "true");
-  icon.textContent = "⌄";
 
   button.append(title, icon);
 

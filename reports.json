@@ -1,10 +1,16 @@
 {
   "courses": [
     {
-      "name": "Data Communications",
+      "name": "Computer and Internet Forensics",
+      "slug": "CompForensics",
+      "reports": []
+    },
+    {
+      "name": "Data Communication and Net-Centric Computing",
       "slug": "DataComs",
       "reports": [
         {
+          "title": "Final Report",
           "pdfUrl": "reports/DataComs/MasonMa_DataComs.pdf",
           "presentationUrl": "",
           "score": ""
@@ -12,14 +18,28 @@
       ]
     },
     {
-      "name": "Computer Forensics",
-      "slug": "CompForensics",
-      "reports": []
-    },
-    {
-      "name": "Ethical Hacking",
+      "name": "Ethical Hacking and Security Testing",
       "slug": "EthicalHacking",
-      "reports": []
+      "reports": [
+        {
+          "title": "Report 1",
+          "pdfUrl": "reports/EthicalHacking/MasonMa_Report1.pdf",
+          "presentationUrl": "https://www.youtube.com/watch?v=wSpmhd-OqKM",
+          "score": ""
+        },
+        {
+          "title": "Report 2",
+          "pdfUrl": "reports/EthicalHacking/MasonMa_Report2.pdf",
+          "presentationUrl": "https://www.youtube.com/watch?v=Q6XVXo2dvrU",
+          "score": ""
+        },
+        {
+          "title": "Report 3",
+          "pdfUrl": "reports/EthicalHacking/MasonMa_Report3.pdf",
+          "presentationUrl": "https://www.youtube.com/watch?v=gVjLPiPv9-s",
+          "score": ""
+        }
+      ]
     }
   ]
 }
