@@ -44,7 +44,6 @@ function normalizeCourse(course) {
       title: report.title || deriveTitleFromUrl(report.pdfUrl),
       pdfUrl: report.pdfUrl || "",
       presentationUrl: report.presentationUrl || "",
-      score: report.score || "",
     })),
   };
 }
@@ -124,13 +123,7 @@ function createReportCard(report) {
     actions.append(createMutedLabel("Presentation unavailable"));
   }
 
-  const score = document.createElement("p");
-  score.className = "score-row";
-  score.innerHTML = report.score
-    ? `Score <strong>${escapeHtml(report.score)}</strong>`
-    : `Score <span class="missing">Score not recorded</span>`;
-
-  card.append(heading, actions, score);
+  card.append(heading, actions);
   return card;
 }
 

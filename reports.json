@@ -12,8 +12,7 @@
         {
           "title": "Final Report",
           "pdfUrl": "reports/DataComs/MasonMa_DataComs.pdf",
-          "presentationUrl": "",
-          "score": ""
+          "presentationUrl": ""
         }
       ]
     },
@@ -24,20 +23,17 @@
         {
           "title": "Report 1",
           "pdfUrl": "reports/EthicalHacking/MasonMa_Report1.pdf",
-          "presentationUrl": "https://www.youtube.com/watch?v=wSpmhd-OqKM",
-          "score": ""
+          "presentationUrl": "https://www.youtube.com/watch?v=wSpmhd-OqKM"
         },
         {
           "title": "Report 2",
           "pdfUrl": "reports/EthicalHacking/MasonMa_Report2.pdf",
-          "presentationUrl": "https://www.youtube.com/watch?v=Q6XVXo2dvrU",
-          "score": ""
+          "presentationUrl": "https://www.youtube.com/watch?v=Q6XVXo2dvrU"
         },
         {
           "title": "Report 3",
           "pdfUrl": "reports/EthicalHacking/MasonMa_Report3.pdf",
-          "presentationUrl": "https://www.youtube.com/watch?v=gVjLPiPv9-s",
-          "score": ""
+          "presentationUrl": "https://www.youtube.com/watch?v=gVjLPiPv9-s"
         }
       ]
     }

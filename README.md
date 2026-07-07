@@ -9,4 +9,4 @@ Add course folders and report PDFs under `reports/`, then run:
 node scripts/update-reports-json.js
 ```
 
-The script refreshes `reports.json` for GitHub Pages while preserving existing titles, presentation links, and scores.
+The script refreshes `reports.json` for GitHub Pages while preserving existing titles and presentation links.

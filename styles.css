@@ -363,24 +363,6 @@ h1 {
   color: var(--subtle);
 }
 
-.score-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  align-items: center;
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.score-row strong {
-  color: var(--success);
-}
-
-.score-row .missing {
-  color: var(--warning);
-}
-
 .empty-course {
   border: 1px dashed var(--border);
   border-radius: 14px;

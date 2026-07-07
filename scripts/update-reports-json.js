@@ -77,7 +77,6 @@ function buildCourse(slug, existingCourses, existingReports) {
         title: existingReport.title || deriveTitle(file.name),
         pdfUrl,
         presentationUrl: existingReport.presentationUrl || detectedPresentationUrl,
-        score: existingReport.score || "",
       };
     })
     .sort((a, b) => a.title.localeCompare(b.title));
