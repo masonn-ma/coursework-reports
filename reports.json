@@ -28,6 +28,17 @@
       ]
     },
     {
+      "name": "Dev Ops",
+      "slug": "DevOps",
+      "reports": [
+        {
+          "title": "Assignment 2",
+          "pdfUrl": "reports/DevOps/Document.pdf",
+          "presentationUrl": "https://youtu.be/fPqw2F9-MKI"
+        }
+      ]
+    },
+    {
       "name": "Ethical Hacking and Security Testing",
       "slug": "EthicalHacking",
       "reports": [
