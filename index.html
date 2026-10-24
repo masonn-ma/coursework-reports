@@ -5,31 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="A centralized dashboard of coursework reports, presentations, and scores grouped by course."
+      content="Academic archive of coursework reports and presentations by Mason Ma, grouped by course."
     >
-    <title>Coursework Reports Dashboard</title>
+    <meta name="author" content="Mason Ma">
+    <meta name="theme-color" content="#0F1116">
+    <meta property="og:title" content="Academic Archive | Mason Ma">
+    <meta property="og:description" content="Coursework reports and presentations, grouped by course.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://masonn-ma.github.io/coursework-reports/">
+    <link rel="canonical" href="https://masonn-ma.github.io/coursework-reports/">
+    <title>Academic Archive | Mason Ma</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="imgs/favicons/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="imgs/favicons/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="imgs/favicons/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="imgs/favicons/favicon-192x192.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="styles.css">
+
+    <script>
+      document.documentElement.classList.add("js");
+      window.__siteReady = false;
+      window.setTimeout(function () {
+        if (!window.__siteReady) {
+          document.documentElement.classList.add("reveal-all");
+        }
+      }, 4000);
+    </script>
     <script src="script.js" defer></script>
   </head>
+
   <body>
     <a class="skip-link" href="#courses">Skip to reports</a>
 
-    <header class="site-header">
-      <div class="header-content">
-        <p class="eyebrow">Academic Archive</p>
-        <h1>Coursework Reports Dashboard</h1>
+    <nav class="site-nav" aria-label="Primary">
+      <div class="site-nav-inner">
+        <a class="nav-brand" href="https://masonn-ma.github.io/mason-ma-portfolio/">Mason Ma</a>
+        <ul class="nav-links">
+          <li><a href="#courses">Courses</a></li>
+        </ul>
+        <a class="nav-resume" href="https://masonn-ma.github.io/mason-ma-portfolio/">Portfolio</a>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <canvas id="hero-network" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <h1>Academic Archive</h1>
+        <p class="hero-links">
+          <a href="#courses">Browse courses</a>
+          <a href="https://masonn-ma.github.io/mason-ma-portfolio/">Main portfolio</a>
+          <a href="mailto:masonma2005@gmail.com">Email</a>
+        </p>
       </div>
     </header>
 
-    <main class="page-shell">
-      <div class="toolbar" aria-label="Course display controls">
-        <button class="toolbar-button" type="button" id="expand-all">Expand all</button>
-        <button class="toolbar-button" type="button" id="collapse-all">Collapse all</button>
-      </div>
+    <main id="main">
+      <div class="container">
+        <section id="courses" aria-labelledby="courses-title">
+          <div class="section-head" data-reveal>
+            <h2 id="courses-title">courses.</h2>
+            <div class="toolbar" role="group" aria-label="Course display controls">
+              <button class="button" type="button" id="expand-all" disabled>Expand all</button>
+              <button class="button" type="button" id="collapse-all" disabled>Collapse all</button>
+            </div>
+          </div>
 
-      <section class="course-list" id="courses" aria-live="polite" aria-busy="true">
-        <p class="loading-state">Loading reports...</p>
-      </section>
+          <div class="course-list" id="course-list" aria-live="polite" aria-busy="true">
+            <p class="loading-state">Loading reports...</p>
+            <noscript>
+              <p class="error-state">
+                This archive needs JavaScript to load the report index. You can
+                <a href="https://github.com/masonn-ma/coursework-reports/tree/main/reports">browse the
+                  reports folder directly on GitHub</a>.
+              </p>
+            </noscript>
+          </div>
+        </section>
+      </div>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-name">Mason Ma</p>
+        <ul class="footer-links">
+          <li>
+            <a href="https://masonn-ma.github.io/mason-ma-portfolio/" target="_blank"
+              rel="noopener noreferrer">Portfolio</a>
+          </li>
+          <li><a href="mailto:masonma2005@gmail.com">Email</a></li>
+          <li>
+            <a href="https://github.com/masonn-ma" target="_blank" rel="me noopener noreferrer">GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/mason-ma-433324335" target="_blank"
+              rel="me noopener noreferrer">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/mason.captures/" target="_blank"
+              rel="noopener noreferrer">Instagram</a>
+          </li>
+        </ul>
+        <p class="footer-copy">&copy; 2026 Ma Thanh Long Mason. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
